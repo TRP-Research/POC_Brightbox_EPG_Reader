@@ -116,11 +116,19 @@ namespace POC_Brightbox_EPG_Reader
         {
             if(lueCarriers.EditValue != null)
             {
+                gridControl1.DataSource = null;
+                tbIP.Text = "";
                 string CarrierIP = lueCarriers.EditValue.ToString();
 
-                List<clsScheduleEvents> MySch = AllChannels[CarrierIP];
+                if(AllChannels.ContainsKey(CarrierIP) == true)
+                {
+                    List<clsScheduleEvents> MySch = AllChannels[CarrierIP];
 
-                gridControl1.DataSource = MySch;
+                    gridControl1.DataSource = MySch;
+
+                    tbIP.Text = CarrierIP;
+                }
+               
             }   
         }
 

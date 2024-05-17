@@ -40,6 +40,9 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbIP = new System.Windows.Forms.TextBox();
             this.pnlHEader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lueCarriers.Properties)).BeginInit();
             this.pnlMAin.SuspendLayout();
@@ -49,6 +52,9 @@
             // 
             // pnlHEader
             // 
+            this.pnlHEader.Controls.Add(this.tbIP);
+            this.pnlHEader.Controls.Add(this.label2);
+            this.pnlHEader.Controls.Add(this.label1);
             this.pnlHEader.Controls.Add(this.btnReadJson);
             this.pnlHEader.Controls.Add(this.lueCarriers);
             this.pnlHEader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -180,6 +186,31 @@
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 5;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(306, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "channel";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(609, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "ip address";
+            // 
+            // tbIP
+            // 
+            this.tbIP.Location = new System.Drawing.Point(670, 42);
+            this.tbIP.Name = "tbIP";
+            this.tbIP.Size = new System.Drawing.Size(100, 20);
+            this.tbIP.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,9 +219,10 @@
             this.Controls.Add(this.pnlMAin);
             this.Controls.Add(this.pnlHEader);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Sky EPG Reader";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlHEader.ResumeLayout(false);
+            this.pnlHEader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lueCarriers.Properties)).EndInit();
             this.pnlMAin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -213,6 +245,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private System.Windows.Forms.TextBox tbIP;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
